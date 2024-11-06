@@ -82,12 +82,12 @@ module Ss
     segundos_hora_entrada = hora_entrada.hora * 3600 + hora_entrada.minuto * 60 + hora_entrada.segundo
     segundos_hora_actual = hora_actual.hora * 3600 + hora_actual.minuto * 60 + hora_actual.segundo
 
-  # Calcular la diferencia en segundos, teniendo en cuenta el ciclo de 24 horas
-  if segundos_hora_actual < segundos_hora_entrada
-    segundos_hora_actual += 86400 # Añadir 24 horas en segundos si es un día siguiente
-  end
-  diferencia_segundos = segundos_hora_actual - segundos_hora_entrada
-  diferencia_minutos = diferencia_segundos / 60
+    # Calcular la diferencia en segundos, teniendo en cuenta el ciclo de 24 horas
+    if segundos_hora_actual < segundos_hora_entrada
+      segundos_hora_actual += 86400 # Añadir 24 horas en segundos si es un día siguiente
+    end
+    diferencia_segundos = segundos_hora_actual - segundos_hora_entrada
+    diferencia_minutos = diferencia_segundos / 60
 
     # Asignar el nivel de prioridad según la diferencia de minutos
     if diferencia_minutos <= 0
